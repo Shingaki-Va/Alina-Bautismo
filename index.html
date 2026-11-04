@@ -226,8 +226,7 @@
     <div id="countdown" class="countdown" aria-live="polite"></div>
 
     <div class="actions">
-      <a class="btn primary" id="rsvp" href="#" target="_blank" rel="noopener">Confirmar asistencia</a>
-      <a class="btn" id="maps" href="#" target="_blank" rel="noopener">Cómo llegar</a>
+      <a class="btn primary" id="maps" href="#" target="_blank" rel="noopener">Cómo llegar</a>
       <a class="btn" id="calendar" href="#" target="_blank" rel="noopener">Agendar en el calendario</a>
     </div>
   </div>
@@ -239,9 +238,7 @@
     titulo: "Bautismo de Alina",
     inicio: "2026-12-05T10:00:00-03:00",
     fin:    "2026-12-05T11:00:00-03:00",
-    lugar:  "Iglesia Nuestra Señora de Lourdes, Av. La Plata 3757, Santos Lugares, Buenos Aires",
-    whatsapp: "5491162177290",   // número con código de país, sin + ni espacios
-    mensajeRSVP: "¡Hola! Confirmo mi asistencia al Bautismo de Alina 💕"
+    lugar:  "Iglesia Nuestra Señora de Lourdes, Av. La Plata 3757, Santos Lugares, Buenos Aires"
   };
 
   // Letras del nombre, una tras otra
@@ -256,8 +253,6 @@
     + '&text=' + encodeURIComponent(EVENTO.titulo)
     + '&dates=' + fmt(EVENTO.inicio) + '/' + fmt(EVENTO.fin)
     + '&location=' + encodeURIComponent(EVENTO.lugar);
-  document.getElementById('rsvp').href =
-    'https://wa.me/' + EVENTO.whatsapp + '?text=' + encodeURIComponent(EVENTO.mensajeRSVP);
 
   // Cuenta regresiva
   const cd = document.getElementById('countdown');
